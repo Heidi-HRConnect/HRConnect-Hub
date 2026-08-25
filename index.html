@@ -229,6 +229,11 @@
   }
   .activity .what h3{ font-size:1.05rem; font-family:'Work Sans'; font-weight:600; }
   .activity .what p{ margin:4px 0 0; color:var(--text-muted); font-size:0.92rem; }
+  .activity .what a.zoom-link{
+    display:inline-block; margin-top:8px; font-size:0.85rem; font-weight:600;
+    color:var(--accent-strong); text-decoration:none;
+  }
+  .activity .what a.zoom-link:hover{ text-decoration:underline; }
   .tag{
     display:inline-block; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em;
     font-family:'IBM Plex Mono'; padding:2px 7px; border-radius:5px; margin-top:8px;
@@ -374,16 +379,52 @@
     <section class="module" id="activities">
       <div class="module-head">
         <h2>Upcoming activities</h2>
-        <span class="count mono">4 on the calendar</span>
+        <span class="count mono">7 on the calendar</span>
       </div>
       <div class="timeline">
-        <!-- ACTIVITIES: add/edit cards here. Recurring cadence below reflects the standing programme. -->
+        <!-- ACTIVITIES: add/edit cards here. -->
         <div class="activity">
-          <div class="when">MONTHLY<br>Online</div>
+          <div class="when">27 AUG<br>Online · 10:00 CET</div>
           <div class="what">
-            <h3>Monthly member call — Zoom</h3>
-            <p>A guest speaker (always free to members) or an open exchange between members. Link goes out to all members ahead of the call.</p>
-            <span class="tag">Recurring · date TBC — Heidi to add</span>
+            <h3>HR meets Employment Law — follow-up with Matthew Brincat</h3>
+            <p>A follow-up conversation with Matthew Brincat of Ganado Advocates, tackling the employment law questions members are asking.</p>
+            <a class="zoom-link" href="https://us02web.zoom.us/j/84459200441?pwd=akbrKEYYX3AyLO3xvajkpjP2e76aeu.1" target="_blank" rel="noopener">Join on Zoom ↗</a>
+            <span class="tag">Monthly member call</span>
+          </div>
+        </div>
+        <div class="activity">
+          <div class="when">15 SEP<br>Online</div>
+          <div class="what">
+            <h3>Turning Values into Reality — Eeze's culture journey</h3>
+            <p>Aarti Carl (Eeze) on how the company has shaped its culture in practice.</p>
+            <a class="zoom-link" href="https://us02web.zoom.us/j/82360062861?pwd=EFbPi61QNd9Q3kXKw5qEBcWYV5CAoc.1" target="_blank" rel="noopener">Join on Zoom ↗</a>
+            <span class="tag">Monthly member call</span>
+          </div>
+        </div>
+        <div class="activity todo">
+          <div class="when">OCT<br>Online</div>
+          <div class="what">
+            <h3>Internal discussion — Gender Pay Gap &amp; law updates</h3>
+            <p>Members-only exchange on the current status of Gender Pay Gap reporting and other recent employment law developments.</p>
+            <a class="zoom-link" href="https://us02web.zoom.us/j/89225395842?pwd=ni1wQPKICLE3S1kc2rbtvaNwJ32nZq.1" target="_blank" rel="noopener">Join on Zoom ↗</a>
+            <span class="tag">Monthly member call · date TBC</span>
+          </div>
+        </div>
+        <div class="activity">
+          <div class="when">26 NOV<br>Malta</div>
+          <div class="what">
+            <h3>A night at the Casino!</h3>
+            <p>In-person evening in Malta — part of HR Connect's autumn gathering. Full details to follow.</p>
+            <span class="tag">In person · details to come</span>
+          </div>
+        </div>
+        <div class="activity todo">
+          <div class="when">DEC<br>Online</div>
+          <div class="what">
+            <h3>Internal discussion — Mentor Panel with Fiona &amp; Alexia</h3>
+            <p>A panel with HR Connect mentors Fiona Ewins Brown and Alexia Frendo — part of the added membership value for members.</p>
+            <a class="zoom-link" href="https://us02web.zoom.us/j/84890784921?pwd=sALTrRan7wHbi8vvbOdqs4D0TWco69.1" target="_blank" rel="noopener">Join on Zoom ↗</a>
+            <span class="tag">Monthly member call · date TBC</span>
           </div>
         </div>
         <div class="activity todo">
@@ -398,14 +439,6 @@
           <div class="when">MAY<br>Malta</div>
           <div class="what">
             <h3>Malta workshop &amp; dinner — early summer</h3>
-            <p>In-person workshop and dinner for members, held in Malta.</p>
-            <span class="tag">Add exact date</span>
-          </div>
-        </div>
-        <div class="activity todo">
-          <div class="when">NOV<br>Malta</div>
-          <div class="what">
-            <h3>Malta workshop &amp; dinner — autumn</h3>
             <p>In-person workshop and dinner for members, held in Malta.</p>
             <span class="tag">Add exact date</span>
           </div>
@@ -440,21 +473,16 @@
     <section class="module" id="recordings">
       <div class="module-head">
         <h2>Zoom recordings</h2>
-        <span class="count mono">0 saved</span>
+        <span class="count mono">1 saved</span>
       </div>
-      <div class="empty-state">
-        <strong>No recordings yet</strong>
-        <p>After each monthly call, the recording link will be added here for members who couldn't join live.</p>
-      </div>
-      <!-- RECORDINGS: copy this block per recording once available
+      <!-- RECORDINGS: copy the resource-row block per recording once available -->
       <div class="resource-list">
         <div class="resource-row">
           <div class="icon">▶</div>
-          <div class="meta"><h3>Session title</h3><span>Month Year</span></div>
-          <a class="open" href="ZOOM_LINK_HERE" target="_blank" rel="noopener">Watch ↗</a>
+          <div class="meta"><h3>HR meets Employment Law — with Matthew Brincat, Ganado Advocates</h3><span>20 August 2026 · Passcode: XSZs#w4&amp;</span></div>
+          <a class="open" href="https://us02web.zoom.us/rec/share/0FQrRhqZHh22_9KrF9Aizwp5a5cgZfKhoD7QgbcJCnMVyOTAPGW7Nr6s6gRjtsTv.2rqNFRheIZFvuhnX?startTime=1787213082000" target="_blank" rel="noopener">Watch ↗</a>
         </div>
       </div>
-      -->
     </section>
 
     <!-- ============ DOCUMENTS ============ -->
