@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Membership Package — HR Connect Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="gate">
+  <div class="gate-card">
+    <div class="badge">HR</div>
+    <h1>HR Connect Hub</h1>
+    <p>This is a private space for HR Connect members. Enter the hub passcode to continue.</p>
+    <form id="gate-form">
+      <input id="gate-input" type="password" inputmode="text" autocomplete="off" placeholder="Passcode" aria-label="Hub passcode">
+      <button id="gate-submit" type="submit">Enter the hub</button>
+      <p id="gate-error"></p>
+    </form>
+    <p id="gate-note">Don't have it? Ask Heidi at heidi@next.io.</p>
+  </div>
+</div>
+
+<div id="content" class="hidden">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand-link" href="index.html">
+        <span class="name">HR Connect</span>
+        <span class="of">part of the <b>NEXT.io</b> iGaming community</span>
+      </a>
+      <nav class="section-nav">
+        <a href="directory.html">Directory</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="recordings.html">Recordings</a>
+        <a href="documents.html">Documentation & Resources</a>
+        <a href="gallery.html">Photo Gallery</a>
+        <a href="membership.html" class="current">Membership Package</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <a class="back-link" href="index.html">← Back to hub</a>
+    <div class="page-header">
+      <p class="eyebrow">Members only</p>
+      <h1>Membership package</h1>
+      <p>What HR Connect membership includes, and how it's priced.</p>
+    </div>
+
+    <span class="draft-flag">Draft — Heidi to confirm wording &amp; figures before this is shared externally</span>
+
+    <div class="price-card">
+      <div class="price">€2,500 – €4,000 <small>per company, per year</small></div>
+      <p>Priced by how many people your company employs in Malta. Every member company receives the same access and benefits — there are no membership tiers.</p>
+    </div>
+
+    <div class="included-grid">
+      <div class="included-item">
+        <h3>Monthly online sessions</h3>
+        <p>A guest speaker (always free to members) or an open exchange between members, every month via Zoom.</p>
+      </div>
+      <div class="included-item">
+        <h3>Three Malta gatherings a year</h3>
+        <p>In-person workshops and dinners in March, May and November — details on the agenda.</p>
+      </div>
+      <div class="included-item">
+        <h3>HR mentor access</h3>
+        <p>Instant access to HR Connect's mentors for guidance and advice.</p>
+      </div>
+      <div class="included-item">
+        <h3>Benchmark surveys</h3>
+        <p>Short anonymous surveys with results shared back to participating members.</p>
+      </div>
+      <div class="included-item">
+        <h3>Member directory &amp; recordings</h3>
+        <p>A growing directory of HR peers, plus recordings of sessions you couldn't attend live.</p>
+      </div>
+      <div class="included-item">
+        <h3>GamingMalta partnership</h3>
+        <p>HR Connect is proudly supported by GamingMalta.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-marks">
+        <span class="mark">HR CONNECT</span>
+        <span class="mark">NEXT.IO</span>
+        <span class="mark">GAMINGMALTA</span>
+      </div>
+      <div class="footer-meta">
+        Questions or updates → <a href="mailto:heidi@next.io">heidi@next.io</a><br>
+        Last updated 1 September 2026
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var PASSCODE = "hrconnect2026";
+    var gate = document.getElementById('gate');
+    var content = document.getElementById('content');
+    var form = document.getElementById('gate-form');
+    var input = document.getElementById('gate-input');
+    var error = document.getElementById('gate-error');
+
+    function unlock(){
+      gate.classList.add('hidden');
+      content.classList.remove('hidden');
+    }
+
+    try {
+      if (sessionStorage.getItem('hrconnect_unlocked') === '1') {
+        unlock();
+      }
+    } catch(e) { /* sessionStorage unavailable — gate stays up */ }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (input.value.trim().toLowerCase() === PASSCODE.toLowerCase()) {
+        try { sessionStorage.setItem('hrconnect_unlocked', '1'); } catch(e) {}
+        unlock();
+      } else {
+        error.textContent = "That's not quite it — check with Heidi.";
+        input.focus();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
