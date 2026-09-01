@@ -394,3 +394,19 @@
   }
   .included-item h3{ font-size:0.95rem; font-family:'Work Sans'; font-weight:600; }
   .included-item p{ margin:6px 0 0; font-size:0.85rem; color:var(--text-muted); }
+
+  .testimonial-grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:18px;
+  }
+  .testimonial-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    padding:24px; box-shadow:var(--shadow);
+    display:flex; flex-direction:column; gap:18px;
+  }
+  .testimonial-card .quote{
+    font-family:'Fraunces', serif; font-size:1.02rem; line-height:1.55; color:var(--text);
+    margin:0; flex:1;
+  }
+  .testimonial-who{ display:flex; align-items:center; gap:12px; }
+  .testimonial-who .name{ font-weight:600; font-size:0.95rem; font-family:'Work Sans'; }
+  .testimonial-who .org{ font-size:0.82rem; color:var(--text-muted); }
